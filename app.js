@@ -1,11 +1,11 @@
    // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyApRL5JnfpxRmPTVCcMmTCIau6kS61yL6k",
-    authDomain: "chat-2bd23.firebaseapp.com",
-    databaseURL: "https://chat-2bd23.firebaseio.com",
-    projectId: "chat-2bd23",
-    storageBucket: "chat-2bd23.appspot.com",
-    messagingSenderId: "647449019098"
+  const config = {
+    apiKey: "AIzaSyB7dw49nHdAJcYFWVI-vFLrt_kf2_xBl0w",
+    authDomain: "restaurante-522b9.firebaseapp.com",
+    databaseURL: "https://restaurante-522b9.firebaseio.com",
+    projectId: "restaurante-522b9",
+    storageBucket: "restaurante-522b9.appspot.com",
+    messagingSenderId: "136888241015"
   };
 
   firebase.initializeApp(config);
