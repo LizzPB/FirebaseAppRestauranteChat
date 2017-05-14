@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='images/iconpage.png' rel='shortcut icon' type='image/png'>
+    <link rel="stylesheet" href="materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="materialize/css/pgwslider.min.css">
+    <link rel="stylesheet" href="materialize/css/estiloheader.css">
+    <link rel="stylesheet" href="materialize/css/estilos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Amita|Handlee|Caveat+Brush|Gochi+Hand|Itim|Merienda|Sofia|Libre+Baskerville|Lobster+Two" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    <title>Mamma Mia Restaurant</title>
+  </head>
+  <!--Descripción del Proyecto-->
+  <!-- Aplicación Web de un restaurante que muestra un menú de comidas a elegir por el usuario. La carta de los platillos a elegir esta dividida en desayuno, comida y cena, los cuales contienen una entrada, un plato fuerte y un postre, acompañados de una bebida; los platillos los puede escoger el usuario mediante la selección de elementos de listas donde se despligan los nombres de las entradas, platos fuertes, postres y bebidas de cada sección-->   
+  <body class="white">
+    <!--Barra de navegación del Restaurante-->
+    <ul id="menu1" class="dropdown-content">
+      <li>
+        <a class="black-text" href="desayuno.html">
+           <img src="images/iconos/coffe.png" class="icon">Desayuno
+        </a>
+      </li>
+      <li>
+        <a class="black-text" href="comida.html">
+          <img src="images/iconos/plato.png" class="icon1">Comida
+        </a>
+      </li>
+      <li>
+        <a class="black-text" href="cena.html">
+          <img src="images/iconos/botella.png" class="icon">Cena
+        </a>
+      </li>
+    </ul>
+     <ul id="menu2" class="dropdown-content">
+      <li>
+        <a class="black-text" href="desayuno.html">
+          <img src="images/iconos/coffe.png" class="icon">Desayuno
+        </a>
+      </li>
+      <li>
+        <a class="black-text" href="comida.html">
+          <img src="images/iconos/plato.png" class="icon1">Comida
+        </a>
+      </li>
+      <li>
+        <a class="black-text" href="cena.html">
+          <img src="images/iconos/botella.png" class="icon">Cena
+        </a>
+      </li>
+    </ul>
+    <div id="navbar">
+      <nav class="col l12">
+        <div class="nav-wrapper z-depth-5  yellow lighten-4"> 
+          <!---Logo del restaurante: vista de escritorio  con la clase hide-on-med-and-down-->       
+          <img src="images/logo3-1.png" alt="" class="responsive-img hide-on-med-and-down" id="logo">
+          <!--Logo del restaurante: vista móvil con la clase hide-on-med-and-up-->
+          <img src="images/logo3-1.png" alt="" class="responsive-img hide-on-med-and-up" id="logo2">
+          <!--Logo del restaurante: vista tablet con las clases hide-on-small-only hide-on-large-only-->
+          <img src="images/logo3-1.png" alt="" class="responsive-img hide-on-small-only hide-on-large-only" 
+          id="logo3">
+          <!-- Titulo: vista de escritorio-->
+          <a href="#" class="brand-logo flow-text black-text hide-on-med-and-down" id="titulonavbar">Restaurant</a>
+          <!--Icono de hamburguesa-->
+          <a href="#" data-activates="mobile-demo" class="button-collapse">
+            <i class="fa fa-bars fa-2x black-text" aria-hidden="true"></i>
+          </a>
+              
+          <!--Elemento del menú de barra de navegación: vista de escritorio-->
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>
+              <a class="black-text" href="index.html">
+                <i class="fa fa-home fa-2x  " aria-hidden="true"></i>Inicio
+              </a>
+            </li>
+            
+            <!-- Dropdown Trigger Menú-->
+            <li>                           
+              <a class="dropdown-button black-text" href="#!" data-activates="menu1">
+                <i class="fa fa-cutlery fa-2x black-text prefix" aria-hidden="true"></i>Menú
+                <i class="fa fa-chevron-circle-down fa-2x right" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a class="black-text" href="contacto.html">
+                <i class="fa fa-user fa-2x  " aria-hidden="true"></i>Contacto
+              </a>
+            </li>
+            <li>
+              <a class="black-text" href="opinion.html" class="center waves-red">
+                <i class="fa fa-commenting  black-text fa-2x " aria-hidden="true"></i> Danos tu opinión
+              </a>
+            </li>
+            <!---<li>
+              <a class="black-text" href="chat.html" class="center waves-red">
+                <i class="fa fa-comments fa-2x black-text" aria-hidden="true"></i>Chat
+              </a>
+            </li>-->
+            <!--<li>
+             <a class="black-text" href="javascript:signUpWithGoogle(this);">
+              <i class="fa fa-user-circle-o black-text fa-2x " aria-hidden="true"></i>Log in</a>
+            </li>-->
+            <li>
+              <a class="black-text" href="guia.html">
+                <i class="fa fa-question fa-2x " aria-hidden="true"></i>Guía
+              </a>             
+            </li>
+          </ul>
+          <!--Elementos del menú de navegación: vista tablet y móvil-->
+          <ul class="side-nav yellow lighten-4" id="mobile-demo">
+            <li>
+            <div class="userView">
+              <div class="col s12">
+                  <img src="images/logo3-1.png" width="275" height="110">
+                </div>
+              </div>
+            </li>
+            <li>
+              <a class="black-text" href="index.html">
+                <i class="fa fa-home  black-text center" aria-hidden="true"></i>Inicio
+              </a>
+            </li>
+            <li>                           
+              <a class="dropdown-button black-text" href="#!" data-activates="menu2"><i class="fa fa-cutlery  black-text prefix" aria-hidden="true"></i>Menú<i class="fa fa-chevron-circle-down right black-text" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a class="black-text" href="contacto.html" class="center waves-red">
+                <i class="fa fa-user  black-text" aria-hidden="true"></i> Contacto
+              </a>
+            </li>
+            <li>
+              <a class="black-text" href="opinion.html" class="center waves-red">
+                <i class="fa fa-commenting  black-text" aria-hidden="true"></i>Danos tu opinión 
+              </a>
+            </li>
+            <!--<li>
+              <a class="black-text" href="chat.html" class="center waves-red">
+                <i class="fa fa-comments black-text" aria-hidden="true"></i>Chat
+              </a>
+            </li>-->
+            <!--<li>
+             <a class="black-text" href="">
+              <i class="fa fa-user-circle-o black-text" aria-hidden="true"></i>Log in</a>
+            </li>-->
+            <li>
+              <a class="black-text" href="guia.html" class="center waves-red">
+                <i class="fa fa-question  black-text" aria-hidden="true"></i>Guía
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!--Sección del Slider: Especialidades de la casa del Restaurante-->
+    <ul class="pgwSlider">
+      <!--Platillo 1 del Slider-->
+      <li>
+        <!--Imagen del Platillo 1-->
+        <img src="images/especialidad1.jpg" alt="Omelet Mamma Mia" data-description="Delicioso omlet de huevo con verduras y carnes en su interior, acompañado con fruta y verdura fresca.">
+      </li>
+      <!--Platillo 2 del Slider-->
+      <li>
+        <!--Imagen del  Platillo 2-->
+        <img src="images/especialidad2.jpg" alt="Tacos de la Casa" data-description="Tacos de res con tortilla frita o dorada al gusto, acompañados de verdura y no podrían faltar los totopos con la salsa roja especial de la casa.">
+      </li>
+      <!--Platillo 3 del Slider-->
+      <li>
+        <!--imagen del Platillo 3-->
+        <img src="images/especialidad3.jpg" alt="Ensalada Gourmet" data-description="Entrada ideal para una cena romántica: una copa de vino y una ensalada de frutas dulces. Para una noche con esa persona especial.">
+      </li>
+    </ul>
+    <!--Espaciado entre el Slider y el contenido de la página-->
+    <div class="row">      
+    </div>  
+    <!--Contenido de la página: paquetes de comida que ofrece el restaurante--> 
+    <div class="row amber lighten-4 z-depth-3" id="datos">      
+      <!--Botón flotante: Ordena aquí-->
+      <div class="col 112 m12 s12">           
+        <h5 class="right red-text"> <i class="fa fa-hand-o-left" aria-hidden="true"></i> Ordena aquí </h5>
+        <a class="right btn btn-floating btn-large red pulse"> <i class="fa fa-shopping-cart" aria-hidden="true"></i>  </a>          
+      </div>
+      <!--Paquetes de desayunos: título del contenedor-->
+      <div class="row col l12 m12 s12">
+        <div class="col 112 m12 s12">
+          <h5 class="left text-flow " id="nombrePaquetes">Paquetes de Desayunos
+            <i class="fa fa-cutlery " aria-hidden="true"></i>
+          </h5>
+        </div>     
+      </div>
+      <!--Paquetes de desayunos: contenedor principal-->
+      <div class="row">
+      <div class="col l12 m12 s12">
+        <!--Paquete de Desayuno 1-->
+        <div class="col l4 m12 s12">
+          <!--Card en donde se almacena el contenido del paquete-->
+          <div class="card hoverable" id="cardpaquete">
+            <!--Imagen del paquete-->  
+            <div class="card-image">
+              <img src="images/paquetes/desayuno1.jpg">
+            </div>
+            <!--Descripción del paquete-->
+            <div class="card-content">          
+              <span class="card-title red-text text-lighten-1s">El de la Abuelita</span>
+              <p class="contenido-paquete">Rico en proteínas. El paquete incluye: 2 huevos estrellados, 1 café americano, salchichas o tocino, 2 hotcakes  y pan tostado.</p>
+              <!--Línea divisora-->
+              <div class="row divider"></div>
+              <!--Botón del precio del paquete-->
+              <div class="center">
+                <button class="center waves-effect waves-orange btn-large red" onclick="" id="botonComprar">
+                  <i class="fa fa-usd" id="iconobtn" aria-hidden="true"></i>
+                  110.00 
+                </button> 
+              </div> 
+            </div>          
+          </div>
+        </div>
+
+        <!--Paquete de Desayuno 2-->
+        <div class="col l4 m12 s12">
+          <div class="card hoverable">  
+            <div class="card-image">
+              <img src="images/paquetes/desayuno2.jpg" class="circle responsive-img">
+              <!--<a class="btn btn-floating btn-large halfway-fab waves-effect waves-light red pulse">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              </a> -->          
+            </div>           
+            <div class="card-content">          
+              <span class="card-title red-text text-lighten">Granjero</span>
+              <p class="contenido-paquete">Adelantando el almuerzo. Este paquete incluye: enchiladas tipo suizo, fruta a elegir del menú, 1 café americano, 1 jugo y pan de sal para las deliciosas enchiladas.</p>
+              <div class="row divider"></div>
+              <div class="center">
+                <a class="center btn btn-large waves-effect waves-orange red">
+                  <i class="fa fa-usd" aria-hidden="true"></i>
+                  160.00
+                </a>
+              </div>   
+            </div>                           
+          </div>
+        </div>
+
+        <!--Paquete de Desayuno 3-->
+        <div class="col l4 m12 s12">
+          <div class="card hoverable">  
+            <div class="card-image">
+              <img src="images/paquetes/desayuno3.jpg">
+              <!--<a class="btn btn-floating btn-large  halfway-fab waves-effect waves-light red pulse">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              </a>-->
+            </div>
+            <div class="card-content">          
+              <span class="card-title red-text text-lighten-1">Tricolor</span>
+              <p class="contenido-paquete">Platillo con dos huevos fritos, base de salsa verde y roja, mole rojo  poblano con ajonjolí y totopos.</p>
+              <div class="row divider"></div>
+              <div class="center">
+                <a class="center waves-effect waves-orange btn-large red">
+                  <i class="fa fa-usd" aria-hidden="true"></i>
+                  90.00
+                </a>
+              </div> 
+            </div>            
+          </div>
+        </div>
+        <!-- Término de los paquetes de Desayunos-->      
+      </div>
+    </div> 
+    </div>    
+
+    <!--Paquetes de comidas: contenedor principal-->
+    <div class="row amber accent-1" id="datos">
+      <!--Paquete de Desayuno 1-->
+      <div class="row col 12 m12 s12">
+        <h5 class="left text-flow " id="nombrePaquetes">Paquetes de Comidas
+          <i class="fa fa-cutlery" aria-hidden="true"></i>
+        </h5>
+      </div>     
+      <!--contenedor principal-->
+      <div class="row">
+      <div class="col 12 m12 s12">
+        <!--paquete 1-->
+        <div class="col l4 m12 s12">
+          <div class="card hoverable">  
+            <div class="card-image">
+              <img src="images/paquetes/comida3.jpg">
+              <!--<a class="btn btn-floating btn-large  halfway-fab waves-effect waves-light red pulse">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              </a>-->
+            </div>
+            <div class="card-content">          
+              <span class="card-title red-text text-lighten-1">Brochetas de Arrachera</span>
+              <p class="contenido-paquete">Brochetas de Arrachera envueltas en una hoja de lechuga con verdura y pimiento  morrón + 1 Jarra de agua fresca.</p>
+              <div class="row divider"></div>
+              <div class="center">
+                <a class="center waves-effect waves-orange btn-large red">
+                  <i class="fa fa-usd" aria-hidden="true"></i>
+                  190.00
+                </a>
+              </div> 
+            </div>          
+          </div>
+        </div>
+
+        <!--paquete 3-->
+        <div class="col l4 m12 s12">
+          <div class="card hoverable">  
+            <div class="card-image">
+              <img src="images/paquetes/comida6.jpg" class="circle responsive-img">
+              <!--<a class="btn btn-floating btn-large halfway-fab waves-effect waves-light red pulse">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              </a> -->          
+            </div>           
+            <div class="card-content">          
+              <span class="card-title red-text text-lighten-1">Cangrejo en Sopa</span>
+              <p class="contenido-paquete">Cangrego sumergido en caldo de sopa sabor marisco, puede ir acompañado con verduras hervidas y modificar las porciones (más caldo, menos sopa o viceversa).</p>
+              <div class="row divider"></div>
+              <div class="center">
+                <a class="center btn btn-large waves-effect waves-orange red">
+                  <i class="fa fa-usd" aria-hidden="true"></i>
+                  170.00
+                </a>
+              </div>   
+            </div>                           
+          </div>
+        </div>
+      
+        <!--paquete 2-->
+        <div class="col l4 m12 s12">
+          <div class="card hoverable">  
+            <div class="card-image">
+              <img src="images/paquetes/comida5.jpg">
+              <!--<a class="btn btn-floating btn-large  halfway-fab waves-effect waves-light red pulse">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              </a>-->
+            </div>
+            <div class="card-content">          
+              <span class="card-title red-text text-lighten0">Pasta con Albóndigas</span>
+              <p class="contenido-paquete">Deliscioso fideo bañado en salsa tipo boloñesa con albóndigas y chile chipotle al gusto.</p>
+              <div class="row divider"></div>
+              <div class="center">
+                <a class="center waves-effect waves-orange btn-large red">
+                  <i class="fa fa-usd" aria-hidden="true"></i>
+                  180.00
+                </a>
+              </div> 
+            </div>            
+          </div>
+        </div>
+
+        <!-- termino de los paquetes -->      
+      </div>
+    </div> 
+    </div> 
+
+    
+    <!-- paquete de cenas-->    
+    <div class="row orange lighten-4" id="datos">
+      <!--titulo -->
+      <div class="row col 12 m12 s12">
+        <h5 class="left text-flow" id="nombrePaquetes">¡¡Cenas: Promoción especial de Ensaladas!!
+          <i class="fa fa-cutlery" aria-hidden="true"></i>
+        </h5>
+      </div>     
+      <!--contenedor principal-->
+      <div class="row">
+      <div class="col 12 m12 s12">
+        <!--paquete 1-->
+        <div class="col l4 m12 s12">
+          <div class="card hoverable">  
+            <div class="card-image">
+              <img src="images/paquetes/cean4.jpg">
+              <!--<a class="btn btn-floating btn-large  halfway-fab waves-effect waves-light red pulse">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              </a>-->
+            </div>
+            <div class="card-content">          
+              <span class="card-title red-text text-lighten-1">Ensalada Marisco</span>
+              <p class="contenido-paquete">Ensalada con mariscos frescos: camarón, pulpo, tsurimi; acompañada de fresca lechuga. Nutritiva y saludable.</p>
+              <div class="row divider"></div>
+              <div class="center">
+                <a class="center waves-effect waves-orange btn-large red">
+                  <i class="fa fa-usd" aria-hidden="true"></i>
+                  110.00
+                </a>
+              </div> 
+            </div>          
+          </div>
+        </div>
+
+        <!--paquete 2-->
+        <div class="col l4 m12 s12">
+          <div class="card hoverable">  
+            <div class="card-image">
+              <img src="images/paquetes/cena7.jpg" class="circle responsive-img">
+              <!--<a class="btn btn-floating btn-large halfway-fab waves-effect waves-light red pulse">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              </a> -->          
+            </div>           
+            <div class="card-content">          
+              <span class="card-title red-text text-lighten-1">Ensalada de la Casa</span>
+              <p class="contenido-paquete">Ensalada tradicional: envuelta en una flor de lechuga, contiene jitomate, pepino, trozos de quesos panela y aceitunas negras.</p>
+              <div class="row divider"></div>
+              <div class="center">
+                <a class="center btn btn-large waves-effect waves-orange red">
+                  <i class="fa fa-usd" aria-hidden="true"></i>
+                  160.00
+                </a>
+              </div>   
+            </div>                           
+          </div>
+        </div>
+      
+        <!--paquete 3-->
+        <div class="col l4 m12 s12">
+          <div class="card hoverable">  
+            <div class="card-image">
+              <img src="images/paquetes/cena5.jpg">
+              <!--<a class="btn btn-floating btn-large  halfway-fab waves-effect waves-light red pulse">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              </a>-->
+            </div>
+            <div class="card-content">          
+              <span class="card-title red-text text-lighten-1">Ensalada Dulce. </span>
+              <p class="contenido-paquete">Bistec de res precocido con salsa dulce con deliciosas fresas acompañando esta balanceada ensalada.</p>
+              <div class="row divider"></div>
+              <div class="center">
+                <a class="center waves-effect waves-orange btn-large red">
+                  <i class="fa fa-usd" aria-hidden="true"></i>
+                  90.00
+                </a>
+              </div> 
+            </div>            
+          </div>
+        </div>
+
+        <!-- termino de los paquetes -->      
+      </div>
+    </div> 
+    </div>
+    <footer class="page-footer deep-orange">
+      <div class="footer-copyright  deep-orange lighten-1">
+        <div class="container center black-text">
+          <p id="nombrePaquetes">© 2017 Copyright Text</p>
+          <p id="nombrePaquetes" > Mamma Mia Restaurant &#174 </p> 
+          <a class="black-text" href="#!">
+            <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+          </a>
+          <a class="black-text" href="#!">
+            <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+          </a>
+          <a class="black-text" href="#!">
+            <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+          </a>
+          <a class="black-text " href="#!">
+            <i class="fa fa-google-plus-official fa-2x" aria-hidden="true"></i>
+          </a>
+          </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="materialize/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    <script type="text/javascript" src="materialize/js/pgwslider.min.js"></script>
+    <script type="text/javascript" src="materialize/js/scripts.js"></script>
+    <script type="text/javascript" src="materialize/js/pedidosPaquetes.js"></script>
+  </body>
+</html>

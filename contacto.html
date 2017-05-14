@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='images/iconpage.png' rel='shortcut icon' type='image/png'>
+    <link rel="stylesheet" href="materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="materialize/css/pgwslider.min.css">
+    <link rel="stylesheet" href="materialize/css/estiloheader.css">
+    <link rel="stylesheet" href="materialize/css/estilos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Amita|Handlee|Caveat+Brush|Gochi+Hand|Itim|Merienda|Sofia|Libre+Baskerville|Lobster+Two" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    <title>Nosotros</title>
+  </head>
+  <body class="lime lighten-4">
+    <!--Header: Nombre de la Institución-->
+    <div class="row" id="header">
+      <!--Contenedor principal-->
+        <div class="teal darken-4 col s12 m12 z-depth-5" id="content-header">
+        <!--Logo de la SEP: Vista para escritorio-->
+          <div class="col l3 m3 hide-on-med-and-down" id="logosep">
+            <img src="images/seplogo.png" alt="Logo de la SEP" class="responsive-img">
+          </div>
+          <!--Logo de la SEP: Vista para móviles-->
+          <div class="col s3 hide-on-med-and-up" id="logosep">
+            <img src="images/seplogovertical.png" alt="Logo de la SEP" class="responsive-img">
+          </div>
+          <!--Encabezado: Vista para tablet-->
+          <div class="col l10 m10 hide-on-small-only hide-on-large-only">
+            <h4 class="grey-text text-lighten-2 flow-text center">TECNOLÓGICO NACIONAL DE MÉXICO</h4>
+            <h4 class="grey-text text-lighten-2 flow-text center">INSTITUTO TECNOLÓGICO DE CUAUTLA</h4>
+          </div>
+          <!--Encabezado: Vista para escritorio-->
+          <div class="col l7 m7 hide-on-med-only hide-on-small-only">
+            <h4 class="grey-text text-lighten-2 flow-text center">TECNOLÓGICO NACIONAL DE MÉXICO</h4>
+            <h4 class="grey-text text-lighten-2 flow-text center">INSTITUTO TECNOLÓGICO DE CUAUTLA</h4>
+          </div>
+          <!--Encabezado: Vista para smartphones-->
+          <div class="col s6 hide-on-med-and-up">
+            <h4 class="grey-text text-lighten-2 flow-text center">TECNM</h4>
+            <h4 class="grey-text text-lighten-2 flow-text center">ITC</h4>
+          </div>
+          <!--Logo de la ITC: Vista para smartphones-->
+          <div class="col s3 center hide-on-med-and-up" id="logoitc">
+            <img src="images/itclogo.png" alt="Logo del ITC" class="responsive-img">
+          </div>
+          <!--Logo de la ITC: Vista para tablet y escritorio-->
+          <div class="col l2 m2  hide-on-small-only" id="logoitc">
+            <img src="images/itclogo.png" alt="Logo del ITC" class="responsive-img">
+          </div>
+        </div>
+    </div>
+    <!--Barra de navegación del Restaurante-->
+    <ul id="menu1" class="dropdown-content">
+      <li>
+        <a class="black-text" href="desayuno.html">
+           <img src="images/iconos/coffe.png" class="icon">Desayuno
+        </a>
+      </li>
+      <li>
+        <a class="black-text" href="comida.html">
+          <img src="images/iconos/plato.png" class="icon1">Comida
+        </a>
+      </li>
+      <li>
+        <a class="black-text" href="cena.html">
+          <img src="images/iconos/botella.png" class="icon">Cena
+        </a>
+      </li>
+    </ul>
+     <ul id="menu2" class="dropdown-content">
+      <li>
+        <a class="black-text" href="desayuno.html">
+          <img src="images/iconos/coffe.png" class="icon">Desayuno
+        </a>
+      </li>
+      <li>
+        <a class="black-text" href="comida.html">
+          <img src="images/iconos/plato.png" class="icon1">Comida
+        </a>
+      </li>
+      <li>
+        <a class="black-text" href="cena.html">
+          <img src="images/iconos/botella.png" class="icon">Cena
+        </a>
+      </li>
+    </ul>
+    <ul id="menu3" class="dropdown-content">
+      <li>
+        <a class="black-text" href="opinion.html"><i class="fa fa-envelope-open black-text" aria-hidden="true"></i>Comentarios</a>
+      </li>
+      <li><a class="black-text" href="chat.html"><i class="fa fa-commenting black-text" aria-hidden="true"></i>Chat</a>
+      </li>
+    </ul>
+    <ul id="menu4" class="dropdown-content">
+      <li>
+        <a class="black-text" href="opinion.html"><i class="fa fa-envelope-open black-text" aria-hidden="true"></i> Comentarios</a>
+      </li>
+      <li><a class="black-text" href="chat.html"><i class="fa fa-commenting black-text" aria-hidden="true"></i> Chat</a>
+      </li>
+    </ul>
+    <div id="navbar">
+      <nav class="col l12">
+        <div class="nav-wrapper z-depth-5  yellow lighten-4"> 
+          <!---Logo del restaurante: vista de escritorio  con la clase hide-on-med-and-down-->       
+          <img src="images/logo3-1.png" alt="" class="responsive-img hide-on-med-and-down" id="logo">
+          <!--Logo del restaurante: vista móvil con la clase hide-on-med-and-up-->
+          <img src="images/logo3-1.png" alt="" class="responsive-img hide-on-med-and-up" id="logo2">
+          <!--Logo del restaurante: vista tablet con las clases hide-on-small-only hide-on-large-only-->
+          <img src="images/logo3-1.png" alt="" class="responsive-img hide-on-small-only hide-on-large-only" 
+          id="logo3">
+          <!-- Titulo: vista de escritorio-->
+          <a href="#" class="brand-logo flow-text black-text hide-on-med-and-down" id="titulonavbar">Restaurant</a>
+          <!--Icono de hamburguesa-->
+          <a href="#" data-activates="mobile-demo" class="button-collapse">
+            <i class="fa fa-bars fa-2x black-text" aria-hidden="true"></i>
+          </a>
+              
+          <!--Elemento del menú de barra de navegación: vista de escritorio-->
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>
+              <a class="black-text" href="index.html">
+                <i class="fa fa-home fa-2x  " aria-hidden="true"></i>Inicio
+              </a>
+            </li>
+            
+            <!-- Dropdown Trigger Menú-->
+            <li>                           
+              <a class="dropdown-button black-text" href="#!" data-activates="menu1">
+                <i class="fa fa-cutlery fa-2x black-text prefix" aria-hidden="true"></i>Menú
+                <i class="fa fa-chevron-circle-down fa-2x right" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a class="black-text" href="contacto.html">
+                <i class="fa fa-user fa-2x  " aria-hidden="true"></i>Contacto
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-button black-text" href="#!" data-activates="menu3">
+                <i class="fa fa-comments fa-2x black-text prefix" aria-hidden="true"></i>Danos tu opinión
+                <i class="fa fa-chevron-circle-down right" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a class="black-text" href="guia.html">
+                <i class="fa fa-question fa-2x " aria-hidden="true"></i>Guía
+              </a>             
+            </li>
+          </ul>
+          <!--Elementos del menú de navegación: vista tablet y móvil-->
+          <ul class="side-nav yellow lighten-4" id="mobile-demo">
+            <li>
+            <div class="userView">
+              <div class="col s12">
+                  <img src="images/logo3-1.png" width="275" height="110">
+                </div>
+              </div>
+            </li>
+            <li>
+              <a class="black-text" href="index.html">
+                <i class="fa fa-home  black-text center" aria-hidden="true"></i>Inicio
+              </a>
+            </li>
+            <li>                           
+              <a class="dropdown-button black-text" href="#!" data-activates="menu2"><i class="fa fa-cutlery  black-text prefix" aria-hidden="true"></i>Menú<i class="fa fa-chevron-circle-down right black-text" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a class="black-text" href="contacto.html" class="center waves-red">
+                <i class="fa fa-user  black-text" aria-hidden="true"></i> Contacto
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-button black-text" href="#!" data-activates="menu4">
+                <i class="fa fa-comments black-text prefix" aria-hidden="true"></i> Opinión
+                <i class="fa fa-chevron-circle-down black-text right" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a class="black-text" href="guia.html" class="center waves-red">
+                <i class="fa fa-question  black-text" aria-hidden="true"></i>Guía
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="row ">
+    <!--Contenedor principal: Datos de Portada-->
+    <div class="col l12 m12 s12">          
+      <!--Contenerdor 1!-->
+      <div class="col l6 m12 s12 amber lighten-4 hoverable" id="datosPortada">
+        <div id="datos">
+        <!--Contenedor para el nombre de la práctica y el nombre de la materia-->
+          <div class="row">
+            <h5 class="center brown-text text-darken-2" id="nombrePractica"> 
+             <i class="fa fa-commenting-o blue-text fa-2x prefix" aria-hidden="true"></i>
+              Práctica: Comentarios y Chat           
+            </h5>
+            <h6 class="center flow-text" id="nombreMateria" > Diseño y Desarrollo de Aplicaciones Móviles
+              <i class="fa fa-mobile" aria-hidden="true"></i>
+            </h6>
+          </div>
+          <!--Contenedor para los integrantes del equipo-->
+          <div class="row">
+            <p class="center flow-text" id="nombreIntegrantes">Lizbeth Pérez Bolaños</p>
+            <p class="center flow-text" id="nombreIntegrantes">Blanca Haidée Onofre Ramírez</p>
+          </div>
+          <!--Contenedor para las fotografías de los integrantes del equipo-->
+          <div class="row col l6 m6 s6 offset-l3 offset-m3 offset-s3">
+            <img src="images/foto/photoLiz.jpg" alt="" class="center circle responsive-img col l6 m6 s6">
+            <img src="images/foto/biophotohaideemin.jpg" alt="" class="center circle responsive-img col l6 m6 s6">
+          </div>
+        </div>
+      </div>     
+      <!--Contenerdor 2!-->
+      <div class="col l6 m12 s12 orange lighten-4" id="datosPortada2">
+        <div id="datos">
+        <!--Contenedor para el nombre del docente-->
+          <div class="row ">
+            <h6 class="center indigo-text text-darken-4 flow-text" id="datosAdicionalesPortada">
+              <i class="fa fa-user" aria-hidden="true"></i>Docente: I.S.C Armando Rodríguez Jiménez         
+            </h6>
+          </div>
+          <div class="row">     
+          </div>
+          <div class="divider">          
+          </div>
+          <!--Contenedor para el nombre de la carrera-->
+          <div class="row">
+            <h6 class="center deep-purple-text text-darken-4  flow-text" id="datosAdicionalesPortada">
+              <i class="fa fa-desktop" aria-hidden="true"></i> Ingeniería en Sistemas Computacionales
+            </h6>
+          </div>
+          <div class="divider">     
+          </div>
+          <!--Contenedor para el semestre y el grupo-->
+          <div class="row">  
+            <h6 class="center deep-purple-text text-darken-4  flow-text" id="datosAdicionalesPortada">
+              <i class="fa fa-graduation-cap" aria-hidden="true"></i> Octavo Semestre
+            </h6>
+            <h6 class="center deep-purple-text text-darken-4  flow-text" id="datosAdicionalesPortada">
+              <i class="fa fa-users" aria-hidden="true"></i>Grupo 1
+            </h6>
+          </div>            
+          <div class="row divider">          
+          </div>
+          <div class="row">     
+          </div>
+          <!--Contenedor para la fecha de entrega de la práctica-->
+          <div class="row "> 
+            <h6 class="center deep-purple-text text-darken-4  flow-text" id="datosAdicionalesPortada">
+              <i class="fa fa-desktop" aria-hidden="true"></i> Fecha de Entrega: 12 de Mayo del 2017
+            </h6>    
+          </div>
+          <div class="row divider">          
+          </div>
+        </div>
+      </div>
+      </div> 
+    </div>
+    <!--Pie de página-->
+    <footer class="page-footer deep-orange">
+      <div class="footer-copyright  deep-orange lighten-1">
+      <!--Contenedor: Copyright y nombre del Restaurante-->
+        <div class="container center black-text">
+          <p id="nombrePaquetes">© 2017 Copyright Text</p>
+          <p id="nombrePaquetes" > Mamma Mia Restaurant &#174 </p> 
+          <!--Iconos sociales de el Restaurante-->
+          <a class="black-text" href="#!">
+            <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+          </a>
+          <a class="black-text" href="#!">
+            <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+          </a>
+          <a class="black-text" href="#!">
+            <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+          </a>
+          <a class="black-text " href="#!">
+            <i class="fa fa-google-plus-official fa-2x" aria-hidden="true"></i>
+          </a>
+          </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="materialize/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    <script type="text/javascript" src="materialize/js/scripts.js"></script>
+  </body>
+</html>

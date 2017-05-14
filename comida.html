@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='images/iconpage.png' rel='shortcut icon' type='image/png'>
+    <link rel="stylesheet" href="materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="materialize/css/pgwslider.min.css">
+    <link rel="stylesheet" href="materialize/css/estiloheader.css">
+    <link rel="stylesheet" href="materialize/css/estilos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Amita|Caveat+Brush|Gochi+Hand|Itim|Merienda|Sofia|Libre+Baskerville|Lobster+Two" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    <title>Comida</title>
+  </head>
+  <body class="lime lighten-1">
+    <!--Barra de navegación del Restaurante-->
+    <ul id="menu1" class="dropdown-content">
+      <li>
+        <a class="black-text" href="desayuno.html">
+           <img src="images/iconos/coffe.png" class="icon">Desayuno
+        </a>
+      </li>
+      <li>
+        <a class="black-text" href="comida.html">
+          <img src="images/iconos/plato.png" class="icon1">Comida
+        </a>
+      </li>
+      <li>
+        <a class="black-text" href="cena.html">
+          <img src="images/iconos/botella.png" class="icon">Cena
+        </a>
+      </li>
+    </ul>
+     <ul id="menu2" class="dropdown-content">
+      <li>
+        <a class="black-text" href="desayuno.html">
+          <img src="images/iconos/coffe.png" class="icon">Desayuno
+        </a>
+      </li>
+      <li>
+        <a class="black-text" href="comida.html">
+          <img src="images/iconos/plato.png" class="icon1">Comida
+        </a>
+      </li>
+      <li>
+        <a class="black-text" href="cena.html">
+          <img src="images/iconos/botella.png" class="icon">Cena
+        </a>
+      </li>
+    </ul>
+    <ul id="menu3" class="dropdown-content">
+      <li>
+        <a class="black-text" href="opinion.html"><i class="fa fa-envelope-open black-text" aria-hidden="true"></i>Comentarios</a>
+      </li>
+      <li><a class="black-text" href="chat.html"><i class="fa fa-commenting black-text" aria-hidden="true"></i>Chat</a>
+      </li>
+    </ul>
+    <ul id="menu4" class="dropdown-content">
+      <li>
+        <a class="black-text" href="opinion.html"><i class="fa fa-envelope-open black-text" aria-hidden="true"></i> Comentarios</a>
+      </li>
+      <li><a class="black-text" href="chat.html"><i class="fa fa-commenting black-text" aria-hidden="true"></i> Chat</a>
+      </li>
+    </ul>
+    <div id="navbar">
+      <nav class="col l12">
+        <div class="nav-wrapper z-depth-5  yellow lighten-4"> 
+          <!---Logo del restaurante: vista de escritorio  con la clase hide-on-med-and-down-->       
+          <img src="images/logo3-1.png" alt="" class="responsive-img hide-on-med-and-down" id="logo">
+          <!--Logo del restaurante: vista móvil con la clase hide-on-med-and-up-->
+          <img src="images/logo3-1.png" alt="" class="responsive-img hide-on-med-and-up" id="logo2">
+          <!--Logo del restaurante: vista tablet con las clases hide-on-small-only hide-on-large-only-->
+          <img src="images/logo3-1.png" alt="" class="responsive-img hide-on-small-only hide-on-large-only" 
+          id="logo3">
+          <!-- Titulo: vista de escritorio-->
+          <a href="#" class="brand-logo flow-text black-text hide-on-med-and-down" id="titulonavbar">Restaurant</a>
+          <!--Icono de hamburguesa-->
+          <a href="#" data-activates="mobile-demo" class="button-collapse">
+            <i class="fa fa-bars fa-2x black-text" aria-hidden="true"></i>
+          </a>
+              
+          <!--Elemento del menú de barra de navegación: vista de escritorio-->
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>
+              <a class="black-text" href="index.html">
+                <i class="fa fa-home fa-2x  " aria-hidden="true"></i>Inicio
+              </a>
+            </li>
+            
+            <!-- Dropdown Trigger Menú-->
+            <li>                           
+              <a class="dropdown-button black-text" href="#!" data-activates="menu1">
+                <i class="fa fa-cutlery fa-2x black-text prefix" aria-hidden="true"></i>Menú
+                <i class="fa fa-chevron-circle-down fa-2x right" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a class="black-text" href="contacto.html">
+                <i class="fa fa-user fa-2x  " aria-hidden="true"></i>Contacto
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-button black-text" href="#!" data-activates="menu3">
+                <i class="fa fa-comments fa-2x black-text prefix" aria-hidden="true"></i>Danos tu opinión
+                <i class="fa fa-chevron-circle-down right" aria-hidden="true"></i>
+              </a>
+            <li>
+              <a class="black-text" href="guia.html">
+                <i class="fa fa-question fa-2x " aria-hidden="true"></i>Guía
+              </a>             
+            </li>
+          </ul>
+          <!--Elementos del menú de navegación: vista tablet y móvil-->
+          <ul class="side-nav yellow lighten-4" id="mobile-demo">
+            <li>
+            <div class="userView">
+              <div class="col s12">
+                  <img src="images/logo3-1.png" width="275" height="110">
+                </div>
+              </div>
+            </li>
+            <li>
+              <a class="black-text" href="index.html">
+                <i class="fa fa-home  black-text center" aria-hidden="true"></i>Inicio
+              </a>
+            </li>
+            <li>                           
+              <a class="dropdown-button black-text" href="#!" data-activates="menu2"><i class="fa fa-cutlery  black-text prefix" aria-hidden="true"></i>Menú<i class="fa fa-chevron-circle-down right black-text" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a class="black-text" href="contacto.html" class="center waves-red">
+                <i class="fa fa-user  black-text" aria-hidden="true"></i> Contacto
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-button black-text" href="#!" data-activates="menu4">
+                <i class="fa fa-comments black-text prefix" aria-hidden="true"></i> Opinión
+                <i class="fa fa-chevron-circle-down black-text right" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a class="black-text" href="guia.html" class="center waves-red">
+                <i class="fa fa-question  black-text" aria-hidden="true"></i>Guía
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <section class ="container">
+      <!--Entradas-->
+      <h1 class="center-align flow-text black-text hide-on-med-and-down Titulo">Entradas</h1>
+      <h1 class="center-align flow-text orange-text hide-on-large-only Titulo">Entradas</h1>
+      <div class="divider"></div><br>
+      <section class="row">
+        <div class="col l5 m6 s12">
+          <div class="carousel carousel-slider center" data-indicators="true">
+            <div class="carousel-item imgEC1" href="#one!">                      
+              <h2 class="black-text Titulo">Sopa Especial</h2>
+              <p class="white-text Slide Contenido">Pollo deshebrado, tallarines y caldo de pollo.</p>
+            </div>
+            <div class="carousel-item imgEC2" href="#two!">
+              <h2 class="black-text Titulo">Tacos Botaneros</h2>
+              <p class="white-text Slide Contenido">Doce taquitos de pollo y queso, servidos con guacamole y salsa martajada.</p>
+            </div>
+            <div class="carousel-item imgEC3" href="#three!">
+              <h2 class="black-text Titulo">Sopa de la Huerta</h2>
+              <p class="white-text Slide Contenido">Consomé con verduras, pollo y tortilla frita, servida con queso panela y aguacate.</p>
+            </div>
+            <div class="carousel-item imgEC4" href="#four!">
+              <h2 class="black-text Titulo">Caldo Tlalpeño</h2>
+              <p class="white-text Slide Contenido">Dos piezas con azucar y canela, con una bola de helado de vainillaVerduras, arroz, pollo deshebrado, queso Oaxaca y chile chipotle.</p>
+            </div>
+            <div class="carousel-item imgEC5" href="#five!">
+              <h2 class="black-text Titulo">Sopa de Tortilla</h2>
+              <p class="white-text Slide Contenido">Con queso Oaxaca, crema, aguacate, chile pasilla y chicharrón.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col l7 m6 s12">
+          <div class="card-panel deep-orange lighten-1 black-text  flow-text Contenido">
+            <table>
+              <tr>
+                <td>Sopa Especial </td>
+                <td>$98</td>
+                <td><input type="checkbox" name="checkbox" id="Sopa Especial" class="entrada" value="98"><label for="Sopa Especial"></label></td>
+              </tr>  
+              <tr>
+                <td>Tacos Botaneros</td>
+                <td>$100</td>
+                <td><input type="checkbox" name="checkbox" id="Tacos Botaneros" class="entrada" value="100"><label for="Tacos Botaneros"></label></td>
+              </tr>   
+              <tr>
+                <td>Sopa de la Huerta</td>
+                <td>$100</td>
+                <td><input type="checkbox" name="checkbox" id="Sopa Huerta" class="entrada" value="100"><label for="Sopa Huerta"></label></td>
+              </tr> 
+              <tr>
+                <td>Caldo Tlalpeño</td>
+                <td>$86</td>
+                <td><input type="checkbox" name="checkbox" id="Caldo Tlalpeño" class="entrada" value="86"><label for="Caldo Tlalpeño"></label></td>
+              </tr>
+              <tr>
+                <td>Sopa de Tortilla</td>
+                <td>$90</td>
+                <td><input type="checkbox" name="checkbox" id="Sopa Tortilla" class="entrada" value="90"><label for="Sopa Tortilla"></label></td>
+               </tr>    
+            </table>
+          </div>
+        </div>
+      </section>
+      <!--Plato fuerte-->
+      <h1 class="center-align flow-text amber-text Titulo">Plato Fuerte</h1>
+      <div class="divider"></div><br>
+      <section class="row">
+        <div class="col l5 m6 s12">
+          <div class="carousel carousel-slider center" data-indicators="true">
+            <div class="carousel-item imgPFC1" href="#one!">                      
+              <h2 class="black-text Titulo">Carne Asada de Sirloin Naturales</h2>
+              <p class="white-text Slide Contenido">Generosa porción de carne acompañada de rajas con elote, guacamole, frijoles refritos y doblada de mole.</p>
+            </div>
+            <div class="carousel-item imgPFC2" href="#two!">
+              <h2 class="black-text Titulo">Ensalada Mexicana</h2>
+              <p class="white-text Slide Contenido">Variedad de lechugas, aguacate, tiras de tortilla, chile ancho frito y pechuga de pollo adobada (75g) aderezada con vinagreta de tamarindo.</p>
+            </div>
+            <div class="carousel-item imgPFC3" href="#three!">
+              <h2 class="black-text Titulo">Pechuga con Mole Poblano</h2>
+              <p class="white-text Slide Contenido">El tradicional mole poblano con doble pechuga (240g) acompañado de arroz y frijoles.</p>
+            </div>
+            <div class="carousel-item imgPFC4" href="#four!">
+              <h2 class="black-text Titulo">Cecinaones</h2>
+              <p class="white-text Slide Contenido">Servida con guacamole, chilaquiles, queso panela y nopal asado.</p>
+            </div>
+            <div class="carousel-item imgPFC5" href="#five!">
+              <h2 class="black-text Titulo">Hamburguesa Mexicana</h2>
+              <p class="white-text Slide Contenido">Dos huevos estrellados sobre sincronizada, bañados con mole.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col l7 m6 s12">
+          <div class="card-panel orange lighten-1 black-text  flow-text Contenido">
+            <table>
+              <tr>
+                <td>Carne Asada de Sirloin</td>
+                <td>$180</td>
+                <td><input type="checkbox" name="checkbox" id="Carne Asada de Sirloin" class="platofuerte" value="180"><label for="Carne Asada de Sirloin"></label></td>
+              </tr>  
+              <tr>
+                <td>Ensalada Mexicana</td>
+                <td>$160</td>
+                <td><input type="checkbox" name="checkbox" id="Ensalada Mexicana" class="platofuerte" value="160"><label for="Ensalada Mexicana"></label></td>
+              </tr>   
+              <tr>
+                <td>Pechuga con Mole Poblano</td>
+                <td>$149</td>
+                <td><input type="checkbox" name="checkbox" id="Pechuga con Mole Poblano" class="platofuerte" value="149"><label for="Pechuga con Mole Poblano"></label></td>
+              </tr> 
+              <tr>
+                <td>Cecina</td>
+                <td>$170</td>
+                <td><input type="checkbox" name="checkbox" id="Cecina" class="platofuerte" value="170"><label for="Cecina"></label></td>
+              </tr>
+              <tr>
+                <td>Hamburguesa Mexicana</td>
+                <td>$146</td>
+                <td><input type="checkbox" name="checkbox" id="Hamburguesa Mexicana" class="platofuerte"  value="146"><label for="Hamburguesa Mexicana"></label></td>
+              </tr>    
+            </table>
+          </div>
+        </div>
+      </section>
+      <!--Postre-->
+      <h1 class="center-align flow-text blue-grey-text darken-4-text  flow-text Titulo">Postre</h1>
+      <div class="divider"></div><br>
+      <section class="row">
+        <div class="col l5 m6 s12">
+          <div class="carousel carousel-slider center" data-indicators="true">
+            <div class="carousel-item imgPC1" href="#one!">                      
+              <h2 class="black-text Titulo">Pastel de Zanahoria</h2>
+              <p class="white-text Slide Contenido">Disfruta de nuestro exquisito pastel, listo para compartir.</p>
+            </div>
+            <div class="carousel-item imgPC2" href="#two!">
+              <h2 class="black-text Titulo">Cheesecake de Guayaba</h2>
+              <p class="white-text Slide Contenido">Para disfrutarse en esos momentos especiales con la persona indicada.</p>
+            </div>
+            <div class="carousel-item imgPC3" href="#three!">
+              <h2 class="black-text Titulo">Helado de Frambuesa</h2>
+              <p class="white-text Slide Contenido">Disfruta de un exquisito helado acompañado con diversas frutas del bosque</p>
+            </div>
+            <div class="carousel-item imgPC4" href="#four!">
+              <h2 class="black-text Titulo">Pay de Fresa</h2>
+              <p class="white-text Slide Contenido">Para disfrutarse en esos momentos especiales con la persona indicada.</p>
+            </div>
+            <div class="carousel-item imgPC5" href="#five!">
+              <h2 class="black-text Titulo">Crepa de Queso crema y Zarzamora</h2>
+              <p class="white-text Slide Contenido">Tres piezas sevidas con queso crema y mermelada de zarzamora.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col l7 m6 s12">
+          <div class="card-panel red lighten-1 black-text  flow-text Contenido">
+            <table>
+              <tr>
+                <td>Pastel de Zanahoria</td>
+                <td>$96</td>
+                <td><input type="checkbox" name="checkbox" id="Pastel de Zanahoria" class="postre"  value="96"><label for="Pastel de Zanahoria"></label></td>
+              </tr>  
+              <tr>
+                <td>Cheesecake de Guayaba</td>
+                <td>$92</td>
+                <td><input type="checkbox" name="checkbox" id="Cheesecake de Guayaba" class="postre"  value="92"><label for="Cheesecake de Guayaba"></label></td>
+              </tr>   
+              <tr>
+                <td>Helado de Frambuesa</td>
+                <td>$78</td>
+                <td><input type="checkbox" name="checkbox" id="Helado de Frambuesa" class="postre"  value="78"><label for="Helado de Frambuesa"></label></td>
+              </tr> 
+              <tr>
+                <td>Pay de Fresa</td>
+                <td>$98</td>
+                <td><input type="checkbox" name="checkbox" id="Pay de Fresa" class="postre"  value="98"><label for="Pay de Fresa"></label></td>
+              </tr>
+              <tr>
+                <td>Crepa con Queso crema y Zarzamora</td>
+                <td>$76</td>
+                <td><input type="checkbox" name="checkbox" id="Crepa con Queso crema y Zarzamora" class="postre" value="76"><label for="Crepa con Queso crema y Zarzamora"></label></td>
+              </tr>    
+            </table>
+          </div>
+        </div>
+      </section>
+      <!--Bebidas-->
+      <h1 class="center-align flow-text lime-text text-accent-4 Titulo">Bebidas</h1>
+      <div class="divider"></div><br>
+      <section class="row">
+        <div class="col l6 m6 s12">
+          <!--bebidas frias-->
+          <a class="modal-trigger" href="#modal2"><img src="images/bebidas/frias/principal.jpg" class="responsive-img"></a>
+          <div id="modal2" class="modal modal-fixed-footer">
+            <div class="modal-content">
+              <h4 class="center-align flow-text blue-grey-text darken-4-text Titulo">Bebidas frías</h4>
+              <div class="divider"></div>
+                <div class="col s3">
+                  <br><img src="images/bebidas/frias/1.jpg" alt="" class="circle responsive-img">
+                  <br><img src="images/bebidas/frias/2.jpg" alt="" class="circle responsive-img">
+                </div>
+                <div class="col s9 center-align flow-text Contenido">
+                  <table>
+                    <tr>
+                      <td>Refrescos</td>
+                      <td>$30</td>
+                      <td><input type="checkbox" id="Refrescos" name="checkbox" class="bebida" value="30"><label for="Refrescos"></label></td>
+                    </tr>  
+                    <tr>
+                      <td>Jugo de naranja</td>
+                      <td>$28</td>
+                      <td><input type="checkbox" id="Jugo de naranja" name="checkbox" class="bebida" value="28"><label for="Jugo de naranja"></label></td>
+                    </tr>   
+                    <tr>
+                      <td>Agua mineral</td>
+                      <td>$32</td>
+                      <td><input type="checkbox" id="Agua mineral" name="checkbox" class="bebida" value="32"><label for="Agua mineral"></label></td>
+                    </tr> 
+                    <tr>
+                      <td>Limonada</td>
+                      <td>$36</td>
+                      <td><input type="checkbox" id="Limonada" name="checkbox" class="bebida" value="36"><label for="Limonada"></label></td>
+                    </tr>
+                    <tr>
+                      <td>Naranjada</td>
+                      <td>$36</td>
+                      <td><input type="checkbox" id="Naranjada" name="checkbox" class="bebida" value="36"><label for="Naranjada"></label></td>
+                    </tr>                  
+                  </table>
+              </div>
+            </div>
+            <div class="modal-footer"><a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cerrar</a></div> 
+          </div>
+        </div>
+        <div class="col l6 m6 s12">
+          <!--bebidas calientes-->     
+          <a class="modal-trigger" href="#modal1"><img src="images/bebidas/cocteles/principal.jpg" class="responsive-img"></a>                    
+          <div id="modal1" class="modal modal-fixed-footer">
+            <div class="modal-content">
+              <h4 class="center-align flow-text blue-grey-text darken-4-text Titulo">Vinos y licores</h4>
+              <div class="divider"></div>
+              <div class="col s3">
+                <br><img src="images/bebidas/cocteles/1.jpg" alt="" class="circle responsive-img"><br>
+                <br><img src="images/bebidas/cocteles/2.jpg" alt="" class="circle responsive-img"><br>
+                <br><img src="images/bebidas/cocteles/3.jpg" alt="" class="circle responsive-img"><br>
+              </div>
+              <div class="col s9 center-align flow-text Contenido">
+                <table>
+                  <tr>
+                    <td>Bacardi Blanco</td>
+                    <td>$115</td>
+                    <td><input type="checkbox" id="Bacardi Blanco" name="checkbox" class="bebida" value="115"><label for="Bacardi Blanco"></label></td>
+                  </tr>  
+                  <tr>
+                    <td>Jack Daniels</td>
+                    <td>$150</td>
+                    <td><input type="checkbox" id="Jack Daniels" name="checkbox" class="bebida" value="150"><label for="Jack Daniels"></label></td>
+                  </tr>   
+                  <tr>
+                    <td>Absolut Azul</td>
+                    <td>$110</td>
+                    <td><input type="checkbox" id="Absolut Azul" name="checkbox" class="bebida" value="110"><label for="Absolut Azul"></label></td>
+                  </tr> 
+                  <tr>
+                    <td>Fauno</td>
+                    <td>$120</td>
+                    <td><input type="checkbox" id="Fauno" name="checkbox" class="bebida" value="120"><label for="Fauno"></label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Pedregal</td>
+                    <td>$35</td>
+                    <td><input type="checkbox" id="Pedregal" name="checkbox" class="bebida" value="35"><label for="Pedregal"></label></td>
+                  </tr>    
+                  <tr>
+                    <td>Heineken</td>
+                    <td>$34</td>
+                    <td><input type="checkbox" id="Heineken" name="checkbox" class="bebida" value="34"><label for="Heineken"></label></td>
+                  </tr>                 
+                </table>
+              </div>
+            </div>
+            <div class="modal-footer"><a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cerrar</a></div>
+          </div>
+        </div>
+      </section>
+      <!---ORDEN!-->
+      <div id="modal3" class="modal">
+        <h4 class="center-align flow-text Titulo">Tu Orden de comida es:</h4>
+        <div class="divider"></div>
+        <div class="modal-content">
+          <h5 class="Titulo">Entrada: </h5>
+          <div class="Contenido" id="pedidoEntrada">            
+          </div>
+          <h5 class="Titulo">Plato Fuerte: </h5>
+          <div class="Contenido" id="pedidoPlatoFuerte">            
+          </div>
+          <h5 class="Titulo">Postre: </h5>
+          <div class="Contenido" id="pedidoPostre">            
+          </div>
+          <h5 class="Titulo">Bebida: </h5>
+          <div class="Contenido" id="pedidoBebida">            
+          </div>
+          <div class="divider"></div>
+          <h5 class="Titulo">Total a pagar: </h5>
+          <div class="Contenido" id="total">            
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Procesar Pedido</a>
+        </div>
+      </div>
+      <!--Boton agregar pedido-->
+      <section class="row right-align">
+        <button data-target="modal3" class="waves-effect orange darken-4 btn hide-on-med-and-down" onclick="agregarPedidos();"><i class="fa fa-pencil" aria-hidden="true"></i></i>Agregar pedido</button>
+        <button data-target="modal3" class="btn-floating btn-large waves-effect waves-darken-4 orange hide-on-large-only" onclick="agregarPedidos();"><i class="fa fa-pencil" aria-hidden="true"></i></buttton>
+      </section>
+    </section>
+    
+    <footer class="page-footer deep-orange">
+      <div class="footer-copyright  deep-orange lighten-1">
+        <div class="container center black-text">
+          <p id="nombrePaquetes">© 2017 Copyright Text</p>
+          <p id="nombrePaquetes" > Mamma Mia Restaurant &#174 </p> 
+          <a class="black-text" href="#!">
+            <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+          </a>
+          <a class="black-text" href="#!">
+            <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+          </a>
+          <a class="black-text" href="#!">
+            <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+          </a>
+          <a class="black-text " href="#!">
+            <i class="fa fa-google-plus-official fa-2x" aria-hidden="true"></i>
+          </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="materialize/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>    
+    <script type="text/javascript" src="materialize/js/pgwslider.min.js"></script>
+    <script type="text/javascript" src="materialize/js/scripts.js"></script>
+    <script type="text/javascript" src="materialize/js/pedidos.js"></script>
+  </body>
+</html>

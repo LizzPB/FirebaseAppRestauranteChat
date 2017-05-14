@@ -1,0 +1,242 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-image: url("../../images/fondo3.jpg");  
+  background-repeat: repeat-y;
+}
+h4{
+  font-weight: bold;
+}
+#header{
+  width: 100%;
+  height: 10%;
+  font-family: 'Raleway', sans-serif;
+}
+#titulonavbar{
+  margin-top: 1%;
+  padding-top: 0 auto;/.
+  z-index: 1;
+}
+#logo{
+  margin-top: -3%;
+  height: 150%;
+  z-index: 1;  
+  padding-left: 2%;
+}
+#logo2{
+  margin-top: -4%;
+  height: 120%;
+  z-index: 1;  
+  padding-left: 14%;
+}
+#logo3{
+  margin-top: -3%;
+  height: 130%;
+  z-index: 1; 
+  padding-left: 30%;
+  position: table;
+}
+
+#navbar{
+  width: 100%;
+  padding-bottom: 2%;
+  /*margin-left: 2%;*
+  /*margin-right: 2%;*/
+  margin-top: 2%;
+  font-family: 'Handlee',cursive;
+  fon
+}
+#mobile-demo li a{
+  font-size: 20px;
+  font-family: 'Sofia', cursive;
+  font-weight: bold;
+}
+#titulonavbar{
+  font-size: 15pt;
+}
+.dropdown-content{
+  width: 120px;
+}
+#menu1 li>a{
+  padding: 5px 12px;
+  background-color: #fff9c4;
+}
+#menu2 li>a{
+  background-color: #fff9c4;
+}
+#menu3 li>a{
+  background-color: #fff9c4;
+}
+#menu4 li>a{
+  background-color: #fff9c4;
+}
+#content-header{
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+#logoitc{
+  padding-top: 2%;
+}
+#datosPortada{
+  font-family: 'Gochi Hand', cursive;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+#datosPortada2{
+  font-family: 'Gochi Hand', cursive;
+  font-weight: bold;
+  padding-bottom: 29px;
+}
+#datos{
+  padding-top: 2%;
+}
+#datosAdicionalesPortada{
+  font-family: 'Itim', cursive;
+  font-size: 18pt;
+}
+#nombrePractica{
+  font-family: 'Caveat Brush', cursive;
+  font-size: 20pt;
+}
+#nombreMateria{
+  font-family: 'Handlee',cursive;
+  font-size: 20pt;
+}
+#nombrePaquetes{
+  font-family: 'Handlee',cursive;
+}
+#nombreIntegrantes{
+  font-family: 'Gochi Hand', cursive;
+  font-size: 16pt;
+}
+#encabezadoComentarios{
+  font-family: 'Sofia', cursive;
+}
+/*Estilo de chat y comentarios*/
+#seccionComentarios, #formComments, #formChat{
+ border-radius: 15px;
+}
+#formChat{
+  height: 400px;
+}
+/*Estilo a la barra de navegación del chat*/
+.scroll{  
+  height:80%;
+  overflow:auto;  
+}
+.scroll::-webkit-scrollbar-track{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+.scroll::-webkit-scrollbar{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+.scroll::-webkit-scrollbar-thumb{
+	background-color: #F90;	
+	background-image: -webkit-linear-gradient(45deg,
+	                                          rgba(255, 255, 255, .2) 25%,
+											  transparent 25%,
+											  transparent 50%,
+											  rgba(255, 255, 255, .2) 50%,
+											  rgba(255, 255, 255, .2) 75%,
+											  transparent 75%,
+											  transparent)
+}
+/*Estilo TextArea del chat*/
+#mensaje{
+  border: none;
+  border-bottom: 2px solid #a8a8a8;  
+  resize: none;
+}
+#mensaje:focus {
+
+  border-bottom: 2px solid #ec8411;  
+  outline: 0 none;
+}
+/*Estilo texto*/
+#nombreUsuario{
+  font-weight: bold;
+  font-size: 12pt;
+  font-family: 'Handlee',cursive;
+}
+#mensajes{  
+  font-size: 12pt;
+  font-family: 'Handlee',cursive;
+}
+#fecha{
+  font-size: 10pt;
+  font-family: 'Handlee',cursive;
+}
+
+#textoSesion{
+  font-weight: bold;
+  font-size: 14pt;
+  font-family: 'Handlee';
+}
+#historialComments{
+  padding: 15px;
+  padding-top: 0px;
+}
+#nameUser{
+  font-family: 'Handlee',cursive;
+  font-size: 14pt;
+  font-weight: bold;
+  margin: 5px;
+}
+#horaComentario{
+  margin-top: 5px;
+  float: right;
+  font-family: 'Itim';
+  font-size: 12pt;
+}
+hr{
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+#comentarioUser{
+  margin: 5px;
+  margin-top: 2%;
+  color: #333;
+  word-wrap: break-word;
+  background: #EEE;
+  padding: 5px 10px;
+}
+
+/* label focus color input text*/
+.input-field input[type=text]:focus + label {
+  color: #ff7043;
+}
+/* label focus color textarea*/
+.input-field #comment:focus + label {
+  color: #ff7043;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus, .input-field #comment:focus{
+  border-bottom: 1px solid #ff7043;
+  box-shadow: 0 1px 0 0 #ff7043;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: #ff7043;
+}
+
+#footer{
+}
+.card-title{
+  font-family: 'Sofia', cursive;
+}
+.contenido-paquete{
+  font-family: 'Merienda', cursive;
+}
+
+@media (min-width:769px) and (max-width:1024px){
+  #titulonavbar{
+    display: none;
+  }
+}
